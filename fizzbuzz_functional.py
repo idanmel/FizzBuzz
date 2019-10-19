@@ -1,14 +1,18 @@
-def get_next_state(game_state):
-    next_move = ""
+def get_next_move(game_state):
+    output = ""
     next_num = len(game_state) + 1
     if next_num % 3 == 0:
-        next_move += "Fizz"
+        output += "Fizz"
     if next_num % 5 == 0:
-        next_move += "Buzz"
+        output += "Buzz"
 
-    if not next_move:
-        next_move = str(next_num)
+    if not output:
+        output = str(next_num)
 
+    return output
+
+
+def get_next_state(game_state, next_move):
     return game_state + (next_move,)
 
 
@@ -24,8 +28,8 @@ def play(state, limit):
     if game_ended(state, limit):
         return state
 
-    # next_move = get_next_move(state)
-    return play(get_next_state(state), limit)
+    next_move = get_next_move(state)
+    return play(get_next_state(state, next_move), limit)
 
 
 if __name__ == '__main__':
