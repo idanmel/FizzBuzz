@@ -7,7 +7,7 @@ The most straightforward imperative implementation.
 
 
 #### fizzbuzz_refactored.py
-Like above with a single change to make it testable
+Refactored so it can be tested
 
 
 #### fizzbuzz_refactored2.py
