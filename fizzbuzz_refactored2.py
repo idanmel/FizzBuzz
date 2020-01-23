@@ -10,6 +10,7 @@ def apply_logic(num):
 
     return output
 
+
 if __name__ == '__main__':
     moves = range(1, 101)
     game = (apply_logic(move) for move in moves)
