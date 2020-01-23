@@ -10,12 +10,7 @@ def apply_logic(num):
 
     return output
 
-
-def play():
+if __name__ == '__main__':
     moves = range(1, 101)
     game = (apply_logic(move) for move in moves)
-    return '\n'.join(game)
-
-
-if __name__ == '__main__':
-    print(play())
+    print('\n'.join(game))
